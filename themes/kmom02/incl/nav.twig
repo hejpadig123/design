@@ -1,0 +1,32 @@
+<div class="header" role="banner">
+    <div class="site-header">
+        {% if pages["_meta"].meta.logo %}
+            <div class="logo">
+                <a href="{{ base_url }}">
+                    <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="Logo" />
+                </a>
+            </div>
+        {% endif %}
+        <div class="title-group">
+            <a href="{{ base_url }}">
+                <h1 class="title">{{ site_title }}</h1>
+                <p class="subtitle">My portfolio.</p>
+            </a>
+        </div>
+    </div>
+    <div class="nav">
+        <div id="nav" role="navigation" tabindex="-1">
+            <ul>
+                {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
+                    <li{% if page.id==current_page.id %} class="active"{% endif %}>
+                        <a href="{{ page.url }}">
+                            {% if page.title == "Hobby" %}
+                                <i class="fas fa-wine-glass"></i>
+                            {% endif %}
+                            {{ page.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>

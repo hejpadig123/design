@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Font Awesome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hejpadig123/design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hejpadig123/design/issues"
+  },
+  "homepage": "https://github.com/hejpadig123/design#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
